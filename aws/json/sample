@@ -1,0 +1,14 @@
+aws budgets create-budget \
+    --account-id $AWS_ACCOUNT_ID \
+    --budget file:///workspace/aws-bootcamp-cruddur-2023/aws/json/budget.json \
+    --notifications-with-subscribers file:///workspace/aws-bootcamp-cruddur-2023/aws/json/notifications-with-subscribers.json 
+        
+
+
+"TopicArn": "arn:aws:sns:us-west-2:381492011399:billing-alram"
+
+aws sns subscribe \
+    --topic-arn "arn:aws:sns:us-west-2:381492011399:billing-alram" \
+    --protocol email \
+    --notification-endpoint shivamm691@gmail.com
+    
